@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      background-color: #f0f0f0;
+    }
+
+    .card-container {
+      display: flex;
+    }
+
+    .card {
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+      margin: 25px 5px;
+      margin-left : 100px;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+    }
+
+    .card.flip .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+    }
+
+    .card-front {
+      background-color: #3498db;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-size: 20px;
+      color: white;
+    }
+
+    .card-back {
+      background-color: #e74c3c;
+      transform: rotateY(180deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+    li{
+      align-self: center;
+      font-size:20px;
+      padding-bottom : 10px;
+    }
+    .price{
+      height:40px;
+      width:300px;
+    }
+  </style>
+  <title>Flip Cards Animation</title>
+</head>
+<body>
+  <h1 style="font-style:italic; text-align : center;">CaptureBeat</h1>
+  <h2 style="font-style:italic; text-align:center;">Microphones</h2>
+  <div class="card-container">
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front"><img src="m1.jpeg" width="300" height="300">
+        </div>
+        <div class="card-back">
+          <div class="description">
+            <ul>
+              <li>Digitek DWM-001</li>
+              <li>Type C Connector</li>
+              <li>Power : DC 5V/1A</li>
+            </ul>
+            <br><br><br><br><br>
+            <button class="price">Rs.849.00/-</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front"><img src="m2.jpeg" width="300" height="300"></div>
+        <div class="card-back">
+          <div class="description">
+          <ul>
+              <li>Digitek DWM-101</li>
+              <li>2.4 G Wireless</li>
+              <li>Audio Output 350mv(max)</li>
+            </ul>
+            <br><br><br><br><br>
+            <button class="price">Rs.4,599/-</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="card-front"><img src="m3.jpeg" width="300" height="300"></div>
+        <div class="card-back">
+          <div class="description">
+            <ul>
+              <li>Digitek DWM-005</li>
+              <li>Power : DC 5V/1A</li>
+              <li>3.5mm AUX Jack</li>
+            </ul>
+            <br><br><br><br><br>
+            <button class="price">Rs.990.00/-</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <center><a href="products.html"><button style="padding : 15px;">Back</button></a></center>
+
+  <script>
+    function flipCard(card) {
+      card.classList.toggle('flip');
+    }
+  </script>
+</body>
+</html>

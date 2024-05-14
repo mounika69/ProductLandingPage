@@ -1,0 +1,64 @@
+
+.navigation {
+  float: right;
+  background-color: #9D4431;
+  width: 100%;
+  padding-top: 5px;
+}
+
+ul {
+  display: inline;
+  float: right;
+}
+
+li {
+  display: inline;
+  font-size: 23px;
+  padding: 16px;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  color: white;
+}
+
+.name {
+  font-style: italic;
+  color: white;
+  float: left;
+  padding-left: 40px;
+  font-size: 30px;
+}
+
+.active {
+  background-color: #F56F1E;
+  padding: 13px;
+}
+
+li a:hover {
+  background-color: #F56F1E;
+  padding: 13px;
+}
+
+.title {
+  text-align: center;
+  font-style: italic;
+  font-size: 40px;
+  margin-top:30px;
+}
+.content{
+  font-size:20px;
+  font-style:italic;
+  line-height:24px;
+  text-align:justify;
+  text-align-last:justify;
+  line-height:24px;
+}
+button{
+  text-align:center;
+  margin-top:60px;
+  padding:30px;
+  margin-left:350px;
+}
